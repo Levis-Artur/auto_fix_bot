@@ -1,4 +1,4 @@
-# Kyiv Avto Bot
+# Avto Fix Bot
 
 Telegram-бот для швидкого створення заявок по авто і відправки їх у робочий чат.
 
@@ -15,7 +15,7 @@ Telegram-бот для швидкого створення заявок по а�
 
 ```env
 BOT_TOKEN=your_bot_token
-TARGET_CHAT=-1001234567890
+TARGET_CHAT=your_chatid
 ADMIN_IDS=123456789,987654321
 REQUEST_CONNECT_TIMEOUT=10
 REQUEST_READ_TIMEOUT=25
