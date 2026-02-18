@@ -26,8 +26,8 @@ require_cmd systemctl
 
 DEFAULT_DEPLOY_USER="${SUDO_USER:-$(id -un)}"
 DEFAULT_BRANCH="main"
-DEFAULT_APP_DIR="/opt/kiev_avto_bot"
-DEFAULT_SERVICE_NAME="kiev-avto-bot"
+DEFAULT_APP_DIR="/opt/avto_fix_bot"
+DEFAULT_SERVICE_NAME="avto-fix-bot"
 DEFAULT_REPO_URL="https://github.com/Levis-Artur/auto_fix_bot.git"
 
 read -r -p "GitHub repo URL (https/ssh) [${DEFAULT_REPO_URL}]: " REPO_URL
