@@ -9,6 +9,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update
+from telegram.constants import ChatType
 from telegram.constants import ParseMode
 from telegram.error import TimedOut
 from telegram.ext import (
@@ -511,6 +512,8 @@ async def handle_confirm_step(update: Update, context: ContextTypes.DEFAULT_TYPE
 
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    if update.effective_chat.type != ChatType.PRIVATE:
+        return
     if not update.message or not update.message.text:
         return
     if await reject_if_blocked(update, context):
